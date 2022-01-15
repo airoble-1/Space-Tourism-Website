@@ -1,0 +1,142 @@
+.header {
+  padding: 40px 0 0 55px;
+  @include tablet {
+    padding: 0px 0px 0px 39px;
+  }
+  @include phone {
+    padding: 20px 0 24px 20px;
+  }
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  &__logo-box {
+    margin-right: 3.5rem;
+  }
+  &__line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: $hover-grey;
+    z-index: 1;
+    transform: translateX(25px);
+    @include tablet {
+      display: none;
+    }
+  }
+  &-nav {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(81px);
+    padding-left: 123px;
+    padding-right: 165px;
+    position: relative;
+    @include tablet {
+      padding: 0px 46px 0px 48px;
+    }
+    @include phone {
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 100;
+      padding: 0px;
+      width: 254px;
+      padding: 30px;
+      margin-right: 0px;
+      transform: translateX(100%);
+      transition: all 0.3s ease-in-out;
+    }
+    &.show {
+      transform: translateX(0%);
+    }
+    &-toggle {
+      display: none;
+      @include phone {
+        border: none;
+        background: none;
+        display: inline-block;
+        margin-right: 24px;
+        cursor: pointer;
+        z-index: 1000;
+      }
+    }
+  }
+  &-nav__list {
+    width: 542px;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    @include tablet {
+      width: 356px;
+    }
+    @include phone {
+      width: auto;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-top: 90px;
+    }
+    &-item {
+      @include phone {
+        width: 100%;
+        margin-bottom: 32px;
+      }
+      &.slideInLeft {
+        animation: 1s slideInLeft forwards;
+      }
+      &:nth-of-type(1) {
+        animation-delay: 0.1s;
+      }
+      &:nth-of-type(2) {
+        animation-delay: 0.2s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: 0.3s;
+      }
+      &:nth-of-type(4) {
+        animation-delay: 0.4s;
+      }
+      & span {
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 700;
+        font-size: 1.6rem;
+        margin-right: 1.3rem;
+        @include tablet {
+          display: none;
+        }
+        @include phone {
+          display: inline;
+        }
+      }
+
+      & .active {
+        border-bottom: 3px solid $white;
+        &:hover {
+          border-bottom: 3px solid $white;
+        }
+        @include phone {
+          border-bottom: none;
+        }
+      }
+      & a {
+        display: block;
+        text-transform: uppercase;
+        padding: 39px 0;
+        border-bottom: 3px solid transparent;
+        transition: all 0.3s ease-in-out;
+        @include phone {
+          padding: 0;
+          border-bottom: none;
+        }
+        &:hover {
+          border-bottom: 3px solid $hover-grey;
+          @include phone {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,249 @@
+.blink-out {
+  animation: 1s blink-out ease-in-out forwards;
+}
+.blink-in {
+  animation: 1s blink-in ease-in-out forwards;
+}
+.tech {
+  &__bg {
+    background: url("./../../assets/technology/background-technology-desktop.jpg")
+      no-repeat center center/cover;
+    @include tablet {
+      background: url("./../../assets/technology/background-technology-tablet.jpg")
+        no-repeat center center/cover;
+    }
+    @include phone {
+      background-image: url("./../../assets/technology/background-technology-mobile.jpg");
+      background-size: cover;
+      background-position: bottom center;
+    }
+  }
+  &__main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-grow: 1;
+    @include tablet {
+      grid-template-columns: 1fr;
+      grid-template-rows: min-content 1fr;
+      position: relative;
+      padding-top: 75px;
+    }
+    @include phone {
+      padding-top: 45px;
+    }
+    & h1 {
+      color: $white;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 400;
+      font-size: 28px;
+      text-transform: uppercase;
+      letter-spacing: 4.72px;
+      margin: 0;
+      @include tablet {
+        font-size: 24px;
+        position: absolute;
+        top: 0%;
+        left: 50px;
+      }
+      @include phone {
+        padding-left: 0px;
+        margin: 0px;
+        font-size: 20px;
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: fit-content;
+        text-align: center;
+      }
+    }
+    & span {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 28px;
+      margin-right: 0.5em;
+      font-weight: 700;
+      color: $hover-grey;
+      @include tablet {
+        font-size: 24px;
+      }
+      @include phone {
+        font-size: 20px;
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    justify-self: center;
+    align-self: center;
+    @include tablet {
+      align-items: center;
+      width: auto;
+      justify-self: stretch;
+      grid-row-start: 2;
+    }
+    @include phone {
+      flex-direction: column-reverse;
+      align-self: flex-start;
+      justify-content: flex-end;
+    }
+  }
+  &__flex-box {
+    display: flex;
+    flex-direction: row-reverse;
+    min-height: 300px;
+    @include tablet {
+      flex-direction: column-reverse;
+      align-items: center;
+      width: auto;
+    }
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 475px;
+    @include tablet {
+      text-align: center;
+    }
+    @include phone {
+      width: 100%;
+    }
+  }
+  &__img {
+    display: block;
+    align-self: center;
+    justify-self: flex-end;
+    @include tablet {
+      justify-self: stretch;
+      align-self: stretch;
+      grid-row-start: 1;
+      width: 100%;
+      max-height: 387px;
+      height: auto;
+      min-height: 0;
+      min-width: 0;
+    }
+    @include phone {
+      width: auto;
+      height: auto;
+      min-height: 0;
+      min-width: 0;
+    }
+  }
+
+  &__nav {
+    @include tablet {
+      margin-bottom: 15px;
+      margin: 35px 0px;
+    }
+    @include phone {
+      margin: 35px 0px;
+    }
+    & ul {
+      padding-right: 30px;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      @include tablet {
+        flex-direction: row;
+        width: 300px;
+        padding-right: 0px;
+      }
+      & li {
+        border-radius: 50%;
+        border: none;
+        background: none;
+      }
+      @include phone {
+        width: 152px;
+      }
+      & button {
+        font-family: "Bellefair", serif;
+        border: 1px solid rgba(151, 151, 151, 0.5);
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        background: none;
+        font-size: 32px;
+        color: $white;
+        @include tablet {
+          width: 60px;
+          height: 60px;
+          font-size: 24px;
+        }
+        @include phone {
+          width: 40px;
+          height: 40px;
+          font-size: 16px;
+        }
+        &:hover {
+          border: 1px solid $white;
+        }
+      }
+      & button.active {
+        background-color: $white;
+        color: black;
+        &:hover {
+          background-color: $white;
+        }
+      }
+    }
+  }
+  &__lead {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    color: $pale-blue;
+    text-transform: uppercase;
+    @include tablet {
+      margin-bottom: 15px;
+    }
+  }
+  &__name {
+    font-family: "Bellefair", serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 56px;
+    line-height: 64px;
+    text-align: left;
+    text-transform: uppercase;
+    @include tablet {
+      font-size: 40px;
+      line-height: 46px;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    @include phone {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+  &__desc {
+    font-family: "Barlow", sans-serif;
+    color: $pale-blue;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: left;
+    @include tablet {
+      font-size: 16px;
+      line-height: 28px;
+      min-height: 150px;
+      text-align: center;
+    }
+    @include phone {
+      font-size: 15px;
+      line-height: 25px;
+      text-align: center;
+      align-self: center;
+      max-width: 400px;
+    }
+  }
+}

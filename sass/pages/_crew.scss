@@ -1,0 +1,211 @@
+.fade-out {
+  animation: 0.5s fade-out ease-in-out forwards;
+}
+.fade-in {
+  animation: 0.5s fade-in ease-in-out forwards;
+}
+.crew {
+  &__bg {
+    background: url("./../../assets/crew/background-crew-desktop.jpg") no-repeat
+      center center/cover;
+    @include tablet {
+      background: url("./../../assets/crew/background-crew-tablet.jpg")
+        no-repeat center center/cover;
+    }
+    @include phone {
+      background-image: url("./../../assets/crew/background-crew-mobile.jpg");
+      background-size: cover;
+      background-position: bottom center;
+    }
+  }
+  &__main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-grow: 1;
+    @include tablet {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+    @include phone {
+      position: relative;
+      padding: 35px 24px 0px 24px;
+    }
+    & h1 {
+      color: $white;
+      font-family: "Barlow Condensed";
+      font-weight: 400;
+      font-size: 28px;
+      text-transform: uppercase;
+      letter-spacing: 4.72px;
+      @include tablet {
+        font-size: 24px;
+        align-self: flex-start;
+        padding-left: 30px;
+      }
+      @include phone {
+        padding-left: 0px;
+        margin: 0px;
+        font-size: 20px;
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: fit-content;
+      }
+    }
+    & span {
+      font-family: "Barlow Condensed";
+      font-size: 28px;
+      margin-right: 0.5em;
+      font-weight: 700;
+      color: $hover-grey;
+      @include tablet {
+        font-size: 24px;
+      }
+      @include phone {
+        font-size: 20px;
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 550px;
+    height: 500px;
+    justify-self: center;
+    align-self: center;
+    @include tablet {
+      align-items: center;
+      width: auto;
+      height: 325px;
+      justify-self: stretch;
+    }
+    @include phone {
+      grid-row-start: 2;
+      flex-direction: column-reverse;
+      align-self: flex-start;
+      padding-top: 25px;
+      justify-content: flex-end;
+    }
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      width: 440px;
+    }
+    @include phone {
+      width: 100%;
+    }
+  }
+  &__img {
+    margin-bottom: 10px;
+    align-self: flex-end;
+    height: 550px;
+    @include tablet {
+      height: 527px;
+      justify-self: center;
+      align-self: flex-start;
+    }
+    @include phone {
+      height: 327px;
+      grid-row-start: 1;
+      align-self: flex-end;
+    }
+  }
+
+  &__nav {
+    & ul {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      width: 132px;
+      height: 15px;
+      @include phone {
+        margin-bottom: 32px;
+      }
+
+      & button {
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        border: none;
+        cursor: pointer;
+        background-color: $hover-grey;
+        &:hover {
+          background-color: $white;
+        }
+      }
+      & button.active {
+        background-color: $white;
+        &:hover {
+          background-color: $white;
+        }
+      }
+    }
+  }
+  &__role {
+    font-size: 32px;
+    line-height: 37px;
+    text-align: left;
+    font-family: "Bellefair", serif;
+    font-weight: normal;
+    font-style: normal;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    @include tablet {
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+    }
+    @include phone {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+  &__name {
+    font-family: "Bellefair", serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 56px;
+    line-height: 64px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    @include tablet {
+      font-size: 40px;
+      line-height: 46px;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    @include phone {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+  &__bio {
+    font-family: "Barlow", sans-serif;
+    color: $pale-blue;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: left;
+    width: auto;
+    @include tablet {
+      font-size: 16px;
+      line-height: 28px;
+      text-align: center;
+    }
+    @include phone {
+      font-size: 15px;
+      line-height: 25px;
+      text-align: center;
+      align-self: center;
+      max-width: 425px;
+    }
+  }
+}
