@@ -16,7 +16,6 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
     - [What I learned](#what-i-learned)
     - [Continued development](#continued-development)
     - [Useful resources](#useful-resources)
-  - [4. Author](#4-author-)
 
 ## 2. Overview
 
@@ -98,8 +97,3 @@ You can checkout the challenge details in the [Frontend Mentor page](https://www
 
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles) - List of ARIA roles, states and properties
 
-## Author
-
-- Website - [Ahmed Roble](https://ahmedroble.com)
-- Email - ahmed.roble@outlook.com
-- LinkedIn - [Ahmed Roble](https://www.linkedin.com/in/ahmedroble)
